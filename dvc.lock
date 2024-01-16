@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/MoviesRecom/pipeline/stage_01_data_ingestion.py
+    deps:
+    - path: src/MoviesRecom/pipeline/stage_01_data_ingestion.py
+      hash: md5
+      md5: 9877c1147fa4c68c4fb8c52873c0ffa5
+      size: 923
+    outs:
+    - path: artifacts/data_ingestion/movie_dataset
+      hash: md5
+      md5: 2e751f97dfe899cffb9641819663fa38.dir
+      size: 45742895
+      nfiles: 2
+    - path: artifacts/data_ingestion/movie_dataset.zip
+      hash: md5
+      md5: ae9de0932a7f1fbfa56ee5c088dc19f4
+      size: 9525845

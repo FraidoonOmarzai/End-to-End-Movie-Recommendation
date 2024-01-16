@@ -40,3 +40,5 @@ conda activate recom-env
 * create requirements.txt and install the required dependencies
 * define logger
 * define utils
+
+* **Data Ingestion**
