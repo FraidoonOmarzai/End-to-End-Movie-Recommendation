@@ -17,3 +17,24 @@ stages:
       hash: md5
       md5: ae9de0932a7f1fbfa56ee5c088dc19f4
       size: 9525845
+  data_validation:
+    cmd: python src/MoviesRecom/pipeline/stage_02_data_validation.py
+    deps:
+    - path: artifacts/data_ingestion/movie_dataset
+      hash: md5
+      md5: 2e751f97dfe899cffb9641819663fa38.dir
+      size: 45742895
+      nfiles: 2
+    - path: config/config.yaml
+      hash: md5
+      md5: 15935fc07ac114e30bbc028af63092af
+      size: 424
+    - path: src/MoviesRecom/pipeline/stage_02_data_validation.py
+      hash: md5
+      md5: c38082e3f557ab2d8b4cbf3270f6d782
+      size: 903
+    outs:
+    - path: artifacts/data_validation/status.txt
+      hash: md5
+      md5: 86e6a2f694c57a675b3e2da6b95ff9ba
+      size: 23

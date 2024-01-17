@@ -42,3 +42,5 @@ conda activate recom-env
 * define utils
 
 * **Data Ingestion**
+
+* **Data Validation**

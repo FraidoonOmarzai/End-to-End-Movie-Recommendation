@@ -6,3 +6,12 @@ stages:
     outs:
       - artifacts/data_ingestion/movie_dataset.zip
       - artifacts/data_ingestion/movie_dataset
+
+  data_validation:
+    cmd: python src/MoviesRecom/pipeline/stage_02_data_validation.py
+    deps:
+      - src/MoviesRecom/pipeline/stage_02_data_validation.py
+      - config/config.yaml
+      - artifacts/data_ingestion/movie_dataset
+    outs:
+      - artifacts/data_validation/status.txt
