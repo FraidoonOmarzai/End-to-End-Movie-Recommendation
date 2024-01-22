@@ -27,14 +27,34 @@ stages:
       nfiles: 2
     - path: config/config.yaml
       hash: md5
-      md5: 15935fc07ac114e30bbc028af63092af
-      size: 424
+      md5: 9bebbabe5b7ce39e6a2d9c573456653c
+      size: 647
     - path: src/MoviesRecom/pipeline/stage_02_data_validation.py
       hash: md5
-      md5: c38082e3f557ab2d8b4cbf3270f6d782
-      size: 903
+      md5: 684e703d17b3f6a1422651489b69d399
+      size: 905
     outs:
     - path: artifacts/data_validation/status.txt
       hash: md5
       md5: 86e6a2f694c57a675b3e2da6b95ff9ba
       size: 23
+  data_transformation:
+    cmd: python src/MoviesRecom/pipeline/stage_03_data_transformation.py
+    deps:
+    - path: artifacts/data_ingestion/movie_dataset/tmdb_5000_credits.csv
+      hash: md5
+      md5: 6c5e0e12bfbc527697d7977d86b97ed4
+      size: 40044293
+    - path: artifacts/data_ingestion/movie_dataset/tmdb_5000_movies.csv
+      hash: md5
+      md5: 64346a71897b5741d553d34b86088603
+      size: 5698602
+    - path: src/MoviesRecom/pipeline/stage_03_data_transformation.py
+      hash: md5
+      md5: 67fb099e91d210c89b32f3ea3d886d25
+      size: 944
+    outs:
+    - path: artifacts/data_transformation/clean_df.csv
+      hash: md5
+      md5: 9b22be502b51f015c6fb06677f8a327c
+      size: 2328206

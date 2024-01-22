@@ -10,3 +10,8 @@ data_validation:
   root_dir: artifacts/data_validation
   unzip_dir: artifacts/data_ingestion/movie_dataset
   status: artifacts/data_validation/status.txt
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  movies_path: artifacts/data_ingestion/movie_dataset/tmdb_5000_movies.csv
+  credits_path: artifacts/data_ingestion/movie_dataset/tmdb_5000_credits.csv

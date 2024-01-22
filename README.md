@@ -44,3 +44,7 @@ conda activate recom-env
 * **Data Ingestion**
 
 * **Data Validation**
+
+* **EDA&Training.ipynb** 
+
+* **Data Transformation**

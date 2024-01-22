@@ -1,7 +1,8 @@
 from src.MoviesRecom.utils.common import *
 from src.MoviesRecom.constants import *
 from src.MoviesRecom.entity.config_entity import (DataIngestionConfig,
-                                                  DataValidationConfig)
+                                                  DataValidationConfig,
+                                                  DataTransformationConfig)
 
 
 class ConfigurationManager:
@@ -31,3 +32,14 @@ class ConfigurationManager:
             status=config.status
         )
         return data_validation_config
+
+    def get_data_transofrmation_config(self) -> DataTransformationConfig:
+        config = self.config_path.data_transformation
+        create_directories([config.root_dir])
+
+        data_transofrmation_config = DataTransformationConfig(
+            root_dir=config.root_dir,
+            movies_path=config.movies_path,
+            credits_path=config.credits_path,
+        )
+        return data_transofrmation_config

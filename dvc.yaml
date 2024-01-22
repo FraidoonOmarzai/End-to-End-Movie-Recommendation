@@ -15,3 +15,12 @@ stages:
       - artifacts/data_ingestion/movie_dataset
     outs:
       - artifacts/data_validation/status.txt
+
+  data_transformation:
+    cmd: python src/MoviesRecom/pipeline/stage_03_data_transformation.py
+    deps:
+      - src/MoviesRecom/pipeline/stage_03_data_transformation.py
+      - artifacts/data_ingestion/movie_dataset/tmdb_5000_movies.csv
+      - artifacts/data_ingestion/movie_dataset/tmdb_5000_credits.csv
+    outs:
+      - artifacts/data_transformation/clean_df.csv

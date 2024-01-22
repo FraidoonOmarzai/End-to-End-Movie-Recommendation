@@ -15,3 +15,10 @@ class DataValidationConfig:
     root_dir: Path
     unzip_dir: Path
     status: str
+
+
+@dataclass
+class DataTransformationConfig:
+    root_dir: Path
+    movies_path: Path
+    credits_path: Path
