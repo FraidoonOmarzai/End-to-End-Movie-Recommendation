@@ -15,3 +15,7 @@ data_transformation:
   root_dir: artifacts/data_transformation
   movies_path: artifacts/data_ingestion/movie_dataset/tmdb_5000_movies.csv
   credits_path: artifacts/data_ingestion/movie_dataset/tmdb_5000_credits.csv
+
+model_training:
+  root_dir: artifacts/model_training
+  df_path: artifacts/data_transformation/clean_df.csv

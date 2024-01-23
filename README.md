@@ -48,3 +48,5 @@ conda activate recom-env
 * **EDA&Training.ipynb** 
 
 * **Data Transformation**
+
+* **Model Training**
