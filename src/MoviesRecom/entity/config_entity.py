@@ -22,3 +22,10 @@ class DataTransformationConfig:
     root_dir: Path
     movies_path: Path
     credits_path: Path
+
+
+@dataclass
+class ModelTrainingConfig:
+    root_dir: Path
+    df_path: Path
+    model_name: str

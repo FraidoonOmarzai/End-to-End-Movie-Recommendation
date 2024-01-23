@@ -2,7 +2,8 @@ from src.MoviesRecom.utils.common import *
 from src.MoviesRecom.constants import *
 from src.MoviesRecom.entity.config_entity import (DataIngestionConfig,
                                                   DataValidationConfig,
-                                                  DataTransformationConfig)
+                                                  DataTransformationConfig,
+                                                  ModelTrainingConfig)
 
 
 class ConfigurationManager:
@@ -43,3 +44,14 @@ class ConfigurationManager:
             credits_path=config.credits_path,
         )
         return data_transofrmation_config
+
+    def get_model_train_config(self) -> ModelTrainingConfig:
+        config = self.config_path.model_training
+        create_directories([config.root_dir])
+
+        model_train_config = ModelTrainingConfig(
+            root_dir=config.root_dir,
+            df_path=config.df_path,
+            model_name=config.model_name
+        )
+        return model_train_config

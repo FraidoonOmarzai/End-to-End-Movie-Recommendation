@@ -27,8 +27,8 @@ stages:
       nfiles: 2
     - path: config/config.yaml
       hash: md5
-      md5: 9bebbabe5b7ce39e6a2d9c573456653c
-      size: 647
+      md5: 92b35cf390e0ec499bb6a29b9092e4bb
+      size: 792
     - path: src/MoviesRecom/pipeline/stage_02_data_validation.py
       hash: md5
       md5: 684e703d17b3f6a1422651489b69d399
@@ -58,3 +58,19 @@ stages:
       hash: md5
       md5: 9b22be502b51f015c6fb06677f8a327c
       size: 2328206
+  model_training:
+    cmd: python src/MoviesRecom/pipeline/stage_04_model_training.py
+    deps:
+    - path: artifacts/data_transformation/clean_df.csv
+      hash: md5
+      md5: 9b22be502b51f015c6fb06677f8a327c
+      size: 2328206
+    - path: src/MoviesRecom/pipeline/stage_04_model_training.py
+      hash: md5
+      md5: 5ac17ad4db043f33fc72a70b797b7046
+      size: 846
+    outs:
+    - path: artifacts/model_training/similarity.joblib
+      hash: md5
+      md5: 9eb2d00f6e208010b7e132f80849b16d
+      size: 184781329

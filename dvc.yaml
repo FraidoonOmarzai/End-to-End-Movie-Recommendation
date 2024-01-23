@@ -24,3 +24,11 @@ stages:
       - artifacts/data_ingestion/movie_dataset/tmdb_5000_credits.csv
     outs:
       - artifacts/data_transformation/clean_df.csv
+
+  model_training:
+    cmd: python src/MoviesRecom/pipeline/stage_04_model_training.py
+    deps:
+      - src/MoviesRecom/pipeline/stage_04_model_training.py
+      - artifacts/data_transformation/clean_df.csv
+    outs:
+      - artifacts/model_training/similarity.joblib

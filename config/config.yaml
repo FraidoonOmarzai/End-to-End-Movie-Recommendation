@@ -19,3 +19,4 @@ data_transformation:
 model_training:
   root_dir: artifacts/model_training
   df_path: artifacts/data_transformation/clean_df.csv
+  model_name: similarity.joblib
