@@ -52,3 +52,20 @@ conda activate recom-env
 * **Model Training**
 
 * using **streamlit** to create a web page for our project
+
+* **Docker**
+    * adding code to docker file
+    * bulid the docker image
+    ```bash
+    docker build -t streamlit-app .
+    docker ps
+    docker images
+    ```
+    * running our app using docker
+    ```bash
+    docker run -p 8080:8080 streamlit-app
+    ```
+    * open the browser and run
+    ```bash
+    htpp://localhost:8080
+    ```
