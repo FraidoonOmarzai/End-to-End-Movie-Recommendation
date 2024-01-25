@@ -50,3 +50,5 @@ conda activate recom-env
 * **Data Transformation**
 
 * **Model Training**
+
+* using **streamlit** to create a web page for our project
