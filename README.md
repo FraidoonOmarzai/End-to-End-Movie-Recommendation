@@ -69,3 +69,6 @@ conda activate recom-env
     ```bash
     htpp://localhost:8080
     ```
+
+* **CI/CD**
+    * using ci/cd to deploy our project to dockerhub    
